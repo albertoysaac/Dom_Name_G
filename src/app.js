@@ -5,9 +5,10 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-let pronoun = ["the", "our"];
-let adj = ["great", "big"];
-let noun = ["jogger", "racoon"];
+let pronoun = ["the", "our", "my", "your", "their"];
+let adj = ["great", "big", "small", "fast", "slow"];
+let noun = ["jogger", "racoon", "dog", "cat", "mouse"];
+let domExt = [".com", ".net", ".us", ".io", ".org"];
 
 window.onload = function() {
   let domains = domainGenerator(pronoun, adj, noun);
@@ -20,7 +21,8 @@ function domainGenerator(pronoun, adj, noun) {
   for (let i = 0; i < pronoun.length; i++) {
     for (let j = 0; j < adj.length; j++) {
       for (let k = 0; k < noun.length; k++) {
-        domain.push(pronoun[i] + adj[j] + noun[k] + ".com");
+        for (let l = 0; l < domExt.length; l++)
+          domain.push(pronoun[i] + adj[j] + noun[k] + domExt[l]);
       }
     }
   }
