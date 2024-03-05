@@ -17,9 +17,28 @@
       <h1 class="mt-5">Hello Rigo!</h1>
       <img src="./rigo-baby.jpg" />
       <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
+        This application is a fun and easy-to-use domain name generator. It
+        creates unique combinations of words and presents them as potential
+        domain names. You can view a list of all generated domain names, or if
+        you're feeling lucky, click the "Next Domain" button to get a random
+        suggestion. Whether you're starting a new business or just exploring
+        creative ideas, this domain name generator is a great tool to spark your
+        imagination. Enjoy!
       </p>
+      <div class="container-fluid content">
+        <div class="row">
+          <div class="col domains">
+            <ul></ul>
+          </div>
+          <div class="col domain">
+            <label for="randomDom fs-1">Suggested domain: </label>
+            <h2 name="randomDom" class="input"></h2>
+            <button onclick="random()" class="btn card-btn btn-secondary">
+              Next Domain
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="fixed-bottom p-4">
         Made with ❤️ by
         <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
